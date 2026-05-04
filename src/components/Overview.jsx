@@ -10,6 +10,7 @@ import SideOption from './ui/SideOption';
 import FraccionamientosPrev from './previews/FraccionamientosPrev';
 import AperturasMasivasPrev from './previews/AperturasMasivasPrev';
 import AutosuficientesMasivasPrev from './previews/AutosuficientesMasivasPrev';
+import PadronesPrev from './previews/PadronesPrev';
 
 
 //SIDE options configuration
@@ -28,6 +29,11 @@ const SIDE_OPTIONS = [
     id: 'autosuficientes-masivas',
     label: 'Autosuficientes masivas',
     component: AutosuficientesMasivasPrev
+  },
+  {
+    id: 'padrones',
+    label: 'Padrones',
+    component: PadronesPrev
   }
 ]
 

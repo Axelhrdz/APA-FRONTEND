@@ -11,6 +11,9 @@ import Test from './components/Test';
 import Fraccionamientos from './pages/overview/Fraccionamientos';
 import AperturasMasivas from './pages/overview/AperturasMasivas';
 import AutosuficientesMasivas from './pages/overview/AutosuficientesMasivas';
+import Padrones from './pages/overview/Padrones';
+import PadronOld from './pages/overview/PadronOld';
+import PadronNew from './pages/overview/PadronNew';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -76,6 +79,9 @@ function App() {
         <Route path='/fraccionamientos' element={<Fraccionamientos />} />
         <Route path='/aperturas-masivas' element={user ? <AperturasMasivas /> : <Navigate to='/login' />} />
         <Route path='/autosuficientes-masivas' element={<AutosuficientesMasivas />} />
+        <Route path='/padrones' element={<Padrones />} />
+        <Route path='/padron-old' element={<PadronOld />} />
+        <Route path='/padron-new' element={<PadronNew />} />
       </Routes>
     </Router>
   )
