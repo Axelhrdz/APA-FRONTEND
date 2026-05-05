@@ -5,7 +5,6 @@ import { DataGrid } from 'react-data-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-regular-svg-icons';
 
-const PADRON_FETCH_LIMIT = 10;
 
 const PadronOld = () => {
 
@@ -17,12 +16,9 @@ const PadronOld = () => {
 
   const getPadronData = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/padrones/padron-old`, {
-        params: { limit: PADRON_FETCH_LIMIT },
-      });
+      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/padrones/padron-old`);
       const raw = res.data.padrones;
-      const normalized = Array.isArray(raw) ? raw : raw && typeof raw === 'object' ? Object.values(raw) : [];
-      const list = normalized.slice(0, PADRON_FETCH_LIMIT);
+      const list = Array.isArray(raw) ? raw : raw && typeof raw === 'object' ? Object.values(raw) : [];
 
       setPadronData(list);
 
