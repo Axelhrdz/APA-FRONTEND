@@ -24,7 +24,7 @@ const GuestHome = () => {
                     <span className='font-normal text-5xl'>ASISTENTE</span>
                     <br />
                     <br />
-                    <span className='font-normal text-5xl text-red-200'>development branch</span>
+                    <span className='font-normal text-5xl text-red-200'>development branch 2</span>
                 </h1>
             </div>
             <div id='description-div'>
