@@ -25,7 +25,7 @@ const GuestHome = () => {
                     <br />
                     <br />
 
-                    <span className='font-normal text-5xl text-red-200'>production</span>
+                    <span className='font-normal text-5xl text-red-200'>production - dev merged</span>
                 </h1>
             </div>
             <div id='description-div'>
