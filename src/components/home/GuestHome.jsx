@@ -24,7 +24,8 @@ const GuestHome = () => {
                     <span className='font-normal text-5xl'>ASISTENTE</span>
                     <br />
                     <br />
-                    <span className='font-normal text-5xl text-red-200'>testing docker branch in prod linux server</span>
+
+                    <span className='font-normal text-5xl text-red-200'>production - dev merged</span>
                 </h1>
             </div>
             <div id='description-div'>
