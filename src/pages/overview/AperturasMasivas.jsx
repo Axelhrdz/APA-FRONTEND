@@ -182,12 +182,12 @@ const AperturasMasivas = () => {
 
   
   return (
-    <div className='flex gap-4 w-full h-screen'>
-      <div className='bg-[#fff] text-black h-screen w-full max-w-[20%] border-r-1 border-stone-300'>
+    <div className='flex flex-col lg:flex-row w-full min-h-[calc(100dvh-64px)] lg:h-[calc(100dvh-64px)] lg:overflow-hidden'>
+      <div className='flex flex-col min-h-0 w-full lg:w-80 lg:max-w-xs lg:flex-shrink-0 lg:h-full bg-[#fff] text-black border-b lg:border-b-0 border-r-0 lg:border-r-1 border-stone-300'>
 
         {
           feedback?.type === 'success' ?
-            <div className='text-center text-2xl font-thin py-5 bg-green-500 text-white'>
+            <div className='shrink-0 text-center text-base sm:text-2xl font-thin py-3 sm:py-5 px-2 bg-green-500 text-white'>
               {/* <h1>Status Code: {feedback.statusCode}</h1> */}
               <span>{feedback.message}</span>
             </div>
@@ -195,7 +195,7 @@ const AperturasMasivas = () => {
         }
         {
           feedback?.type === 'error' ?
-            <div className='text-center text-2xl font-thin py-5 bg-red-500 text-white'>
+            <div className='shrink-0 text-center text-base sm:text-2xl font-thin py-3 sm:py-5 px-2 bg-red-500 text-white'>
               {/* <h1>Status Code: {feedback.statusCode}</h1> */}
               <span>{feedback.message}</span>
             </div>
@@ -203,13 +203,13 @@ const AperturasMasivas = () => {
         }
 
 
-        <div className='h-full max-h-[10%] p-5 text-center border-b-1 border-stone-300'>
-            <h1 className='text-2xl font-thin'>Aperturas Masivas</h1>
+        <div className='shrink-0 p-4 sm:p-5 text-center border-b-1 border-stone-300'>
+            <h1 className='text-xl sm:text-2xl font-thin'>Aperturas Masivas</h1>
         </div>
         {/* <span className=''>This is the aperturas masivas page</span> */}
         
 
-        <form ref={formRef} encType='multipart/form-data' action="" onSubmit={handleSubmit} className='flex flex-col gap-4 bg-stone_700 text-black p-4 max-w-md mx-auto h-[700px] overflow-y-auto'>
+        <form ref={formRef} encType='multipart/form-data' action="" onSubmit={handleSubmit} className='flex flex-col gap-4 bg-stone_700 text-black p-4 w-full max-w-md mx-auto lg:max-w-none lg:mx-0 flex-1 lg:min-h-0 lg:overflow-y-auto'>
 
           <div className='flex flex-col gap-2'>
             <InputLabel
@@ -362,12 +362,12 @@ const AperturasMasivas = () => {
       </div>
       
       {/* DATA GRID SECTION */}
-      <div className='w-full max-w-[80%] p-5 h-screen'>
-        <div className='h-full max-h-[10%] text-center'>
-            <h1 className='text-2xl font-thin'>Data Overview</h1>
+      <div className='flex flex-col flex-1 min-w-0 min-h-[50vh] lg:min-h-0 lg:h-full p-3 sm:p-5 lg:overflow-hidden'>
+        <div className='shrink-0 text-center pb-3 sm:pb-4'>
+            <h1 className='text-xl sm:text-2xl font-thin'>Data Overview</h1>
         </div>
-        <div className='h-full max-h-[90%]'>
-          <DataGrid className='rdg-light' columns={columns} rows={rows} />
+        <div className='flex-1 min-h-[280px] lg:min-h-0 overflow-auto'>
+          <DataGrid className='rdg-light w-full h-full min-h-[280px]' columns={columns} rows={rows} />
         </div>
       </div>
     </div>
